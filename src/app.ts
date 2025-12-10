@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import cors from "cors";
+import searchRoutes from "./routes/searchRoutes";
 
 const app: Application = express();
 
@@ -17,5 +18,6 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.use("/search", searchRoutes);
 
 export default app;
