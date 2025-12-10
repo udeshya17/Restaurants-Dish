@@ -1,0 +1,98 @@
+{
+    "info": {
+      "name": "Restaurant Dish Search API",
+      "_postman_id": "c8e53ec4-1349-4d88-8aac-restaurant-search",
+      "description": "Postman collection for testing Restaurant Dish Search Backend",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Health Check",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/health",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["health"]
+          }
+        }
+      },
+      {
+        "name": "Search Dish (Biryani - Price 150 to 300)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/search/dishes?name=biryani&minPrice=150&maxPrice=300",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["search", "dishes"],
+            "query": [
+              { "key": "name", "value": "biryani" },
+              { "key": "minPrice", "value": "150" },
+              { "key": "maxPrice", "value": "300" }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Search Dish (Chicken - Price 100 to 250)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/search/dishes?name=chicken&minPrice=100&maxPrice=250",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["search", "dishes"],
+            "query": [
+              { "key": "name", "value": "chicken" },
+              { "key": "minPrice", "value": "100" },
+              { "key": "maxPrice", "value": "250" }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Search Dish Missing Name (Error Test)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/search/dishes?minPrice=150&maxPrice=300",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["search", "dishes"],
+            "query": [
+              { "key": "minPrice", "value": "150" },
+              { "key": "maxPrice", "value": "300" }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Search Dish Missing Price Range (Error Test)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/search/dishes?name=biryani",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["search", "dishes"],
+            "query": [
+              { "key": "name", "value": "biryani" }
+            ]
+          }
+        }
+      }
+    ]
+  }
+  
