@@ -133,13 +133,13 @@ Use Postman or cURL.
 ### ✔ 1. Health Check
 
 ```
-GET http://localhost:3000/health
+GET https://restaurants-dish.onrender.com/health
 ```
 
 ### ✔ 2. Search for a Dish (Main API)
 
 ```
-GET http://localhost:3000/search/dishes?name=biryani&minPrice=150&maxPrice=300
+GET https://restaurants-dish.onrender.com/search/dishes?name=biryani&minPrice=150&maxPrice=300
 ```
 
 **Example Response:**
@@ -166,13 +166,13 @@ GET http://localhost:3000/search/dishes?name=biryani&minPrice=150&maxPrice=300
 **Search dish:**
 
 ```bash
-curl "http://localhost:3000/search/dishes?name=biryani&minPrice=150&maxPrice=300"
+curl "https://restaurants-dish.onrender.com/search/dishes?name=biryani&minPrice=150&maxPrice=300"
 ```
 
 **Health check:**
 
 ```bash
-curl "http://localhost:3000/health"
+curl "https://restaurants-dish.onrender.com/health"
 ```
 
 ---

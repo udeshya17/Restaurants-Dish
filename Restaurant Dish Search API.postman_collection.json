@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "845e1d36-41ff-4782-b219-772d0bfb0e8c",
+		"name": "Restaurant Dish Search API",
+		"description": "Postman collection for testing Restaurant Dish Search Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27048558"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurants-dish.onrender.com/health",
+					"protocol": "https",
+					"host": [
+						"restaurants-dish",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Dish (Biryani - Price 150 to 300)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurants-dish.onrender.com/search/dishes?name=biryani&minPrice=150&maxPrice=300",
+					"protocol": "https",
+					"host": [
+						"restaurants-dish",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"search",
+						"dishes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "biryani"
+						},
+						{
+							"key": "minPrice",
+							"value": "150"
+						},
+						{
+							"key": "maxPrice",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Dish (Chicken - Price 100 to 250)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurants-dish.onrender.com/search/dishes?name=chicken&minPrice=100&maxPrice=250",
+					"protocol": "https",
+					"host": [
+						"restaurants-dish",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"search",
+						"dishes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "chicken"
+						},
+						{
+							"key": "minPrice",
+							"value": "100"
+						},
+						{
+							"key": "maxPrice",
+							"value": "250"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Dish Missing Name (Error Test)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurants-dish.onrender.com/search/dishes?minPrice=150&maxPrice=300",
+					"protocol": "https",
+					"host": [
+						"restaurants-dish",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"search",
+						"dishes"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "150"
+						},
+						{
+							"key": "maxPrice",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Dish Missing Price Range (Error Test)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restaurants-dish.onrender.com/search/dishes?name=biryani",
+					"protocol": "https",
+					"host": [
+						"restaurants-dish",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"search",
+						"dishes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "biryani"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
