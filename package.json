@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
-    "seed": "ts-node src/seed/seedDatabase.ts"
+    "prestart": "npm run build",
+    "start": "node dist/server.js"
   },
   "keywords": [
     "restaurant",
@@ -30,4 +30,3 @@
     "ts-node-dev": "^2.0.0"
   }
 }
-
